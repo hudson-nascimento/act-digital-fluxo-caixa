@@ -1,20 +1,20 @@
-# API Fluxo de caixa com micro-serviÁos
+# Fluxo de caixa
 
 ### Sobre
-AplicaÁ„o de Fluxo de caixa È construÌda na arquitetura de microserviÁo em conjunto com as boas praticas de desenvolvimento, cÛdigo limpo e os principios do SOLID.
+Aplica√ß√£o de Fluxo de caixa √© constru√≠da na arquitetura de microservi√ßo em conjunto com as boas praticas de desenvolvimento, c√≥digo limpo e os principios do SOLID.
 
 ### Como usar
-#### Setup e execuÁ„o
+#### Setup e execu√ß√£o
 1. Clone o projeto
 ```PowerShell
 git clone https://github.com/hudson-nascimento/act-digital-fluxo-caixa.git
 ```
-2. Acesse a pasta do cÛdigo fonte (src)
+2. Acesse a pasta do c√≥digo fonte (src)
 ```PowerShell
 cd src
 ```
 3. Excute o comando abaixo no prompt.
-O comando criar· a rede 'fluxo-caixa-network' e os containers.
+O comando criar√° a rede 'fluxo-caixa-network' e os containers.
 ```PowerShell
 docker-compose up -d
 ```
@@ -22,7 +22,7 @@ docker-compose up -d
 ```PowerShell
 dotnet run
 ```
-### ConstruÌdo com
+### Constru√≠do com
 #### Frameworks
 - [.Net Framework 6](https://learn.microsoft.com/pt-br/shows/net-core-101/what-is-net)
 - [Entity Framework Core](https://learn.microsoft.com/pt-br/ef/core/)
@@ -33,7 +33,7 @@ dotnet run
 #### Message brokers
 - [Apache Kafka](https://kafka.apache.org/documentation/#introduction)
 
-#### Arquitetura e Padrıes de projeto
+#### Arquitetura e Padr√µes de projeto
 - [Microservice Architeture](https://microservices.io/patterns/microservices.html)
 
 ###### Creational design pattern
@@ -49,7 +49,7 @@ dotnet run
 
 - [SOLID Principle](http://cleancoder.com/files/solid.md)
 
-#### ContainerizaÁ„o
+#### Containeriza√ß√£o
 - [Docker](https://docs.docker.com/)
 
 ### License
