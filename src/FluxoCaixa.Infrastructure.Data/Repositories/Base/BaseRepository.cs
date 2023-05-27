@@ -6,7 +6,8 @@ namespace FluxoCaixa.Infrastructure.Data.Repositories.Base
 {
     public class BaseRepository
     {
-        public class RepositoryBase<T> : IRepository<T> where T : class
+        public class RepositoryBase<T> 
+            : IRepository<T> where T : class
         {
             protected readonly CashInContext Context;
             protected readonly DbSet<T> DbSet;

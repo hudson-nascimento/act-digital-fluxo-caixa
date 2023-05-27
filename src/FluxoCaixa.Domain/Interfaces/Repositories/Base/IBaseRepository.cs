@@ -4,6 +4,10 @@ namespace FluxoCaixa.Domain.Interfaces.Repositories.Base
 {
     internal interface IBaseRepository
     {
+        /// <summary>
+        /// Contrato de interface generico para repositório.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
         public interface IRepository<T> : IDisposable where T : class
         {
             void Add(T entity);

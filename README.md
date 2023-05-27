@@ -1,4 +1,4 @@
-# API Fluxo de caixa com microservicos
+# API Fluxo de caixa com micro-serviços
 
 ### Sobre
 Aplicação de Fluxo de caixa é construída na arquitetura de microserviço em conjunto com as boas praticas de desenvolvimento, código limpo e os principios do SOLID.
@@ -9,13 +9,14 @@ Aplicação de Fluxo de caixa é construída na arquitetura de microserviço em conju
 ```PowerShell
 git clone https://github.com/hudson-nascimento/act-digital-fluxo-caixa.git
 ```
-2. Acesse a pasta fonte (src)
+2. Acesse a pasta do código fonte (src)
 ```PowerShell
 cd src
 ```
-3. Excute o comando para criar o conteiner Docker
+3. Excute o comando abaixo no prompt.
+O comando criará a rede 'fluxo-caixa-network' e os containers.
 ```PowerShell
-docker run
+docker-compose up -d
 ```
 4. Execute o projeto
 ```PowerShell
@@ -34,12 +35,18 @@ dotnet run
 
 #### Arquitetura e Padrões de projeto
 - [Microservice Architeture](https://microservices.io/patterns/microservices.html)
+
+###### Creational design pattern
 - [Builder]()
+- [Factory]()
 - [Singleton]()
+###### Structural design pattern
 - [Adapter]()
 - [Decorator]()
+###### Behavioral design pattern
 - [Strategy]()
-- [Factory]()
+
+
 - [SOLID Principle](http://cleancoder.com/files/solid.md)
 
 #### Containerização

@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-APIs", "1-APIs", "{89677126-82E9-4DA2-933D-4CF1C3523D2F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{89677126-82E9-4DA2-933D-4CF1C3523D2F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Domain", "2-Domain", "{9E774DF0-CAA1-41F5-8CAA-AC7839F72CFC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{9E774DF0-CAA1-41F5-8CAA-AC7839F72CFC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Infra", "3-Infra", "{F217BF8C-67D0-4137-89CF-70CD734CE924}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{F217BF8C-67D0-4137-89CF-70CD734CE924}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Test", "4-Test", "{1B574326-9F22-4C1B-AD28-C75CFC80BE37}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{1B574326-9F22-4C1B-AD28-C75CFC80BE37}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluxoCaixa.Infrastructure", "FluxoCaixa.Infrastructure\FluxoCaixa.Infrastructure.csproj", "{B18CB8AC-AE54-421A-9EE8-DDAF2453F2D1}"
 EndProject
@@ -21,9 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluxoCaixa.Api", "FluxoCaix
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluxoCaixa.Test", "FluxoCaixa.Test\FluxoCaixa.Test.csproj", "{DC082571-8EAE-4D4D-BC59-4CB6AD35647C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluxoCaixa.CashIn.Api", "FluxoCaixa.CashIn.Api\FluxoCaixa.CashIn.Api.csproj", "{3D06F815-6BEE-40C4-86AA-00B9392EDB35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluxoCaixa.CashIn.Api", "FluxoCaixa.CashIn.Api\FluxoCaixa.CashIn.Api.csproj", "{3D06F815-6BEE-40C4-86AA-00B9392EDB35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluxoCaixa.CashOut.Api", "FluxoCaixa.CashOut.Api\FluxoCaixa.CashOut.Api.csproj", "{F0BB407E-FAFB-4AB0-B488-B30C43CEBFD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluxoCaixa.CashOut.Api", "FluxoCaixa.CashOut.Api\FluxoCaixa.CashOut.Api.csproj", "{F0BB407E-FAFB-4AB0-B488-B30C43CEBFD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
