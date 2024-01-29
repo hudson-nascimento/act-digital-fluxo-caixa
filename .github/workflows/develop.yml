@@ -1,0 +1,49 @@
+name: '[DEV] Build & Deploy'
+
+on:
+  pull_request:
+    types: closed
+    branches: develop
+
+jobs:
+  ci-dotnet-core:
+    if: ${{ github.event.pull_request.merged }}
+    uses: reusable/workflows-ci-dotnet-core/.github/workflows/build.yml@v1
+    secrets:
+      APPLICATION_ID: '${{ secrets.APPLICATION_ID}}'
+      APP_PIVATE_KEY: '${{ SECRETS.APP_PIVATE_KEY }}'
+
+  upload-package:
+    uses: reusable/workflows-ci-dotnet-core/.github/workflows/generic.yml@v1
+    needs: ci-dotnet-core
+    with:
+      promote-environment: dev
+      publish-package: true
+    secrets:
+      APPLICATION_ID: '${{ secrets.APPLICATION_ID}}'
+      APP_PIVATE_KEY: '${{ SECRETS.APP_PIVATE_KEY }}'
+
+  deploy-dev:
+    needs:
+      - upload-package
+    uses: reusable/workflows-ci-dotnet-core/.github/workflows/deploy.yml@v1
+    with:
+      environment: dev
+      -- deploy-code-package-name: ${{ needs.upload-package.outputs.artifact-name }}
+      -- deploy-code-package-version: ${{ needs.upload-package.outputs.artifact-version }}-${{ github.sha }} 
+    secrets:
+      APPLICATION_ID: '${{ secrets.APPLICATION_ID}}'
+      APP_PIVATE_KEY: '${{ SECRETS.APP_PIVATE_KEY }}'
+      
+  open-pr-to-release-branches:
+    needs:
+      - upload-package
+      - deploy-dev
+    uses: reusable/workflows-ci-dotnet-core/.github/workflows/create.yml@v1
+    with:
+      origin-branch: 'develop'
+      target-create-branch: true
+      target-base-branch: 'main'
+      target-branch: 'release/${{ needs.upload-package.outputs.artifact-version}}'
+    secrets: inherit
+    
