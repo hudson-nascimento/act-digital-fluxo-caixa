@@ -1,0 +1,20 @@
+name: "1 - Build & PR"
+
+on:
+  push:
+    branches: 'fetures**'
+
+jobs:
+  ci-dotnet-core:
+    uses: reusable/workflows-ci-dotnet-core/.github/workflows/build.yml@v1
+    secrets: 
+      APLICATION_ID: '${{ secrets.APPLICATION_ID }}'
+      APP_PRIVATE_KEY: '${{ secrets.APP_PRIVATE_KEY }}'
+
+  open-pr-to-develop:
+    needs:
+    - ci-dotnet-core
+    uses: reusable/workflows-ci-dotnet-core/.github/workflows/create.yml@v1
+    with:
+      target-branch: 'develop'
+    secrets: inherit
